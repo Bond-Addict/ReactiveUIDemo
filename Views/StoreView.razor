@@ -1,8 +1,53 @@
 ﻿@inherits ReactiveComponentBase<StoreViewModel>
-<div class="card">
-    <div class="card-body">
-        <EditForm Model="@ViewModel">
 
-        </EditForm>
-    </div>
+<div class="container mt-4">
+	<div class="card">
+		<div class="card-header text-white bg-primary">
+			<h5 class="mb-0">Store Departments</h5>
+		</div>
+		<div class="card-body">
+			<EditForm Model="@ViewModel" OnSubmit="Submit">
+				@foreach (var department in ViewModel.Departments)
+				{
+					<div class="card mb-4 shadow-sm">
+						<div class="card-header bg-light">
+							<h6 class="mb-0">Department ID: @department.Id</h6>
+						</div>
+						<div class="card-body">
+							<div class="mb-3">
+								<label for="@($"department-name-{department.Id}")" class="form-label">Department Name</label>
+								<InputText id="@($"department-name-{department.Id}")" class="form-control" @bind-Value="department.Name" />
+							</div>
+
+							<h6>Item 1 - Sold At Locations</h6>
+							<div class="row">
+								@foreach (var location in department.Item1.SoldAtLocations)
+								{
+									<div class="col-md-6 mb-3">
+										<div class="card bg-light p-3">
+											<div class="mb-2">
+												<label for="@($"location-state-{location.Id}")" class="form-label">State</label>
+												<InputText id="@($"location-state-{location.Id}")" class="form-control" @bind-Value="location.State" />
+											</div>
+											<div>
+												<label for="@($"location-name-{location.Id}")" class="form-label">Location Name</label>
+												<InputText id="@($"location-name-{location.Id}")" class="form-control" @bind-Value="location.Name" />
+											</div>
+										</div>
+									</div>
+								}
+							</div>
+						</div>
+					</div>
+				}
+				<div class="d-flex justify-content-end">
+					<button type="submit" class="btn btn-primary">Generate Report</button>
+					@if (ShouldShowReportButton)
+					{
+						<button type="button" class="btn btn-secondary ml-2">View Report</button>
+					}
+				</div>
+			</EditForm>
+		</div>
+	</div>
 </div>
