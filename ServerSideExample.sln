@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSideExample", "ServerSideExample.csproj", "{90A05A1B-21B5-4731-8AAC-882DE1750D87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src/Server/ServerSideExample", "src/Server/ServerSideExample.csproj", "{90A05A1B-21B5-4731-8AAC-882DE1750D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSideTests", "test\ServerSideTests\ServerSideTests.csproj", "{551CCCAD-DA9C-443B-983D-B18452541BD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{90A05A1B-21B5-4731-8AAC-882DE1750D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90A05A1B-21B5-4731-8AAC-882DE1750D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90A05A1B-21B5-4731-8AAC-882DE1750D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551CCCAD-DA9C-443B-983D-B18452541BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551CCCAD-DA9C-443B-983D-B18452541BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551CCCAD-DA9C-443B-983D-B18452541BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551CCCAD-DA9C-443B-983D-B18452541BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
